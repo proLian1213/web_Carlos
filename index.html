@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alto-Tac Montajes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <!-- Overlay y Menú Lateral -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-panel">
+            <button class="close-btn" id="closeBtn" aria-label="Cerrar menú">&times;</button>
+            
+            <nav class="side-nav">
+                <button class="nav-item" id="quienesSomosBtn">Quiénes somos</button>
+                <button class="nav-item" id="aQueNosDedicamosBtn">A qué nos dedicamos</button>
+                <button class="nav-item" id="porQueElegirnosBtn">¿Por qué elegirnos?</button>
+                <button class="nav-item" id="nuestrosSectoresBtn">Nuestros sectores</button>
+                <div class="nav-dropdown">
+                    <button class="nav-item" id="nuestrosTrabajosBtn">Nuestros trabajos</button>
+                    <div class="sub-nav">
+                        <button class="sub-nav-item" id="blogTrabajosBtn">Blog de trabajos realizados</button>
+                    </div>
+                </div>
+                <button class="nav-item" id="contactoBtn">Contacto</button>
+            </nav>
+
+            <!-- Panel de información que se despliega -->
+            <div class="info-content" id="infoContent">
+                <h3>Quiénes somos</h3>
+                <p>Alto-Tac Montajes es una empresa especializada en impresión en gran formato, diseño gráfico y rotulación profesional. Ofrecemos soluciones visuales potentes, rápidas y de alta calidad para que cada cliente comunique su marca de forma clara, atractiva y memorable — ya sea un pequeño comercio, una gran empresa o un evento de gran impacto.</p>
+                
+                <div class="values-container">
+                    <div class="value-box"><strong>CALIDAD</strong> En cada acabado.</div>
+                    <div class="value-box"><strong>RAPIDEZ</strong> En los tiempos de producción</div>
+                    <div class="value-box"><strong>COMPROMISO</strong> con cada proyecto, grande o pequeño</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="hero-container">
+        <!-- Panel Izquierdo (Negro) -->
+        <section class="left-panel">
+            <div class="cube-container">
+                <div class="cube">
+                    <!-- Front Face -->
+                    <div class="cube-face cube-front">
+                        <div class="logo-accent top-left"></div>
+                        <div class="logo-accent bottom-right"></div>
+                        <div class="logo-text">
+                            <div class="logo-top">
+                                <span class="letter">A</span>
+                                <span class="dash">-</span>
+                                <span class="letter">T</span>
+                            </div>
+                            <div class="logo-bottom">
+                                <span class="letter">M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Back Face -->
+                    <div class="cube-face cube-back">
+                        <div class="logo-text" style="transform: none; text-shadow: none;">
+                            <div class="logo-top"><span class="letter">A</span><span class="dash">-</span><span class="letter">T</span></div>
+                            <div class="logo-bottom"><span class="letter">M</span></div>
+                        </div>
+                    </div>
+                    <!-- Right Face -->
+                    <div class="cube-face cube-right">
+                        <div class="logo-text" style="transform: none; text-shadow: none;">
+                            <div class="logo-top"><span class="letter">A</span><span class="dash">-</span><span class="letter">T</span></div>
+                            <div class="logo-bottom"><span class="letter">M</span></div>
+                        </div>
+                    </div>
+                    <!-- Left Face -->
+                    <div class="cube-face cube-left">
+                        <div class="logo-text" style="transform: none; text-shadow: none;">
+                            <div class="logo-top"><span class="letter">A</span><span class="dash">-</span><span class="letter">T</span></div>
+                            <div class="logo-bottom"><span class="letter">M</span></div>
+                        </div>
+                    </div>
+                    <!-- Top Face -->
+                    <div class="cube-face cube-top">
+                        <div class="logo-text" style="transform: none; text-shadow: none;">
+                            <div class="logo-top"><span class="letter">A</span><span class="dash">-</span><span class="letter">T</span></div>
+                            <div class="logo-bottom"><span class="letter">M</span></div>
+                        </div>
+                    </div>
+                    <!-- Bottom Face -->
+                    <div class="cube-face cube-bottom">
+                        <div class="logo-text" style="transform: none; text-shadow: none;">
+                            <div class="logo-top"><span class="letter">A</span><span class="dash">-</span><span class="letter">T</span></div>
+                            <div class="logo-bottom"><span class="letter">M</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel Derecho (Gris Oscuro) -->
+        <section class="right-panel">
+            <div class="hero-content">
+                <h1 class="main-title">Alto-Tac Montajes</h1>
+                <div class="divider"></div>
+                <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
+                <div class="badge">COSLADA, MADRID</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="services-section">
+        
+        <!-- Impresión en gran formato -->
+        <div class="service-block reveal">
+            <h2 class="service-title">Impresión en gran formato</h2>
+            <div class="service-content">
+                <div class="service-image-box">
+                    <img src="images/impresion_printer_1780990060791.png" alt="Impresión en gran formato">
+                    <div class="image-text">
+                        Impresión de alta definición y materiales resistentes para exteriores. Superficies amplias, mensaje claro — una pieza visual que destaca incluso a gran distancia.
+                    </div>
+                </div>
+                <ul class="service-list">
+                    <li><span class="arrow">→</span> Lonas publicitarias</li>
+                    <li><span class="arrow">→</span> Vinilos adhesivos</li>
+                    <li><span class="arrow">→</span> Roll-ups, banners y expositores</li>
+                    <li><span class="arrow">→</span> Cartelería rígida (PVC, foam, metacrilato, aluminio)</li>
+                    <li><span class="arrow">→</span> Gráficas para ferias y eventos</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Diseño gráfico -->
+        <div class="service-block reveal">
+            <h2 class="service-title">Diseño gráfico</h2>
+            <div class="service-cards-container">
+                <div class="design-card">
+                    <img src="images/diseno_identidad_1780990072108.png" alt="Identidad visual">
+                    <h3>Identidad visual</h3>
+                    <p>Creación de identidad visual y diseño de piezas publicitarias que potencian la imagen de marca.</p>
+                </div>
+                <div class="design-card">
+                    <img src="images/diseno_artes_1780990082304.png" alt="Artes finales">
+                    <h3>Artes finales</h3>
+                    <p>Adaptación de artes finales y maquetación de materiales promocionales con precisión y profesionalidad.</p>
+                </div>
+                <div class="design-card">
+                    <img src="images/diseno_materiales_1780990094420.png" alt="Materiales promocionales">
+                    <h3>Materiales promocionales</h3>
+                    <p>Maquetación de materiales promocionales para comunicar tu marca de forma clara y atractiva.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rotulación profesional -->
+        <div class="service-block rotulacion-block reveal">
+            <div class="rotulacion-image">
+                <img src="images/rotulacion_van_1780990106199.png" alt="Rotulación de furgoneta">
+            </div>
+            <div class="rotulacion-content">
+                <h2 class="service-title">Rotulación profesional</h2>
+                <p class="service-subtitle">Instalación profesional en cualquier superficie. Aplicación técnica impecable, gráfica envolvente, colores sólidos y acabado duradero.</p>
+                
+                <div class="rotulacion-list">
+                    <div class="rotulacion-item">
+                        <div class="icon">🚗</div>
+                        <div class="text">
+                            <h4>Vehículos</h4>
+                            <p>Rotulación de vehículos convertidos en soporte de marca con presencia profesional.</p>
+                        </div>
+                    </div>
+                    <div class="rotulacion-item">
+                        <div class="icon">🏪</div>
+                        <div class="text">
+                            <h4>Escaparates</h4>
+                            <p>Rotulación de escaparates con vinilos precisos y líneas limpias.</p>
+                        </div>
+                    </div>
+                    <div class="rotulacion-item">
+                        <div class="icon">📍</div>
+                        <div class="text">
+                            <h4>Señalética</h4>
+                            <p>Señalética interior y exterior con diseño funcional y estético.</p>
+                        </div>
+                    </div>
+                    <div class="rotulacion-item">
+                        <div class="icon">🔧</div>
+                        <div class="text">
+                            <h4>Instalación</h4>
+                            <p>Instalación profesional en cualquier superficie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN POR QUÉ ELEGIRNOS -->
+    <section id="por-que-elegirnos" class="why-us-section">
+        <h2 class="service-title">Por qué elegirnos</h2>
+        <div class="why-us-grid">
+            <div class="why-us-card reveal">
+                <h3>Experiencia real</h3>
+                <p>En montaje e instalación, no solo impresión</p>
+            </div>
+            <div class="why-us-card reveal">
+                <h3>Asesoramiento personalizado</h3>
+                <p>Desde la idea hasta el montaje final</p>
+            </div>
+            <div class="why-us-card reveal">
+                <h3>Tecnología de última generación</h3>
+                <p>Impresión de alta definición y acabados duraderos y resistentes</p>
+            </div>
+            <div class="why-us-card reveal">
+                <h3>Cumplimiento estricto de plazos</h3>
+                <p>Capacidad para proyectos urgentes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SECTORES -->
+    <section id="sectores" class="sectores-section">
+        <h2 class="service-title">Sectores con los que trabajamos</h2>
+        <div class="sectores-grid">
+            <div class="sector-item reveal">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <span>Comercios y franquicias</span>
+            </div>
+            <div class="sector-item reveal">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+                </div>
+                <span>Agencias de publicidad y marketing</span>
+            </div>
+            <div class="sector-item reveal">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+                </div>
+                <span>Arquitectura y decoración</span>
+            </div>
+            <div class="sector-item reveal">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <span>Eventos, ferias y congresos</span>
+            </div>
+            <div class="sector-item reveal">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4H2v16Z"></path></svg>
+                </div>
+                <span>Industria y logística</span>
+            </div>
+            <div class="sector-item reveal">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="18" height="8"></rect><path d="M3 10L12 2l9 8"></path><line x1="6" y1="12" x2="6" y2="20"></line><line x1="10" y1="12" x2="10" y2="20"></line><line x1="14" y1="12" x2="14" y2="20"></line><line x1="18" y1="12" x2="18" y2="20"></line><line x1="2" y1="20" x2="22" y2="20"></line></svg>
+                </div>
+                <span>Instituciones públicas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TRABAJOS REALIZADOS -->
+    <section id="trabajos-realizados" class="trabajos-section">
+        <h2 class="service-title">Trabajos realizados</h2>
+        <div class="trabajos-grid">
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/media__1781009954622.jpg" alt="Rotulación de vehículos">
+                </div>
+                <div class="trabajo-content">
+                    <h3>Rotulación de vehículos</h3>
+                    <p>Aplicación técnica impecable. Gráfica envolvente, colores sólidos y acabado duradero. Un vehículo convertido en soporte de marca con presencia profesional.</p>
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/media__1781008582671.jpg" alt="Lonas y gran formato">
+                </div>
+                <div class="trabajo-content">
+                    <h3>Lonas y gran formato</h3>
+                    <p>Superficies amplias, mensaje claro. Impresión de alta definición y materiales resistentes para exteriores. Una pieza visual que destaca incluso a gran distancia.</p>
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/media__1781009807481.jpg" alt="Decoración gráfica">
+                </div>
+                <div class="trabajo-content">
+                    <h3>Decoración gráfica</h3>
+                    <p>Integración visual en interiores. Vinilos, paneles y texturas que transforman el ambiente sin alterar la arquitectura. Diseño sutil, elegante y contemporáneo.</p>
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/media__1781010240577.jpg" alt="Señalética interior">
+                </div>
+                <div class="trabajo-content">
+                    <h3>Señalética interior</h3>
+                    <p>Diseño funcional y estético. Elementos gráficos que ordenan, guían y elevan la experiencia del espacio. Claridad visual con un acabado limpio y profesional.</p>
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/media__1781010487398.jpg" alt="Stands y eventos">
+                </div>
+                <div class="trabajo-content">
+                    <h3>Stands y eventos</h3>
+                    <p>Soluciones gráficas para entornos efímeros. Montaje rápido, materiales premium y presencia visual contundente. Un espacio que comunica identidad y atrae miradas.</p>
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/media__1781009321549.jpg" alt="Letras Corpóreas">
+                </div>
+                <div class="trabajo-content">
+                    <h3>Letras Corpóreas</h3>
+                    <p>Fabricados en materiales resistentes y personalizables, ofrecen una imagen moderna y un alto impacto visual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN BLOG DE TRABAJOS REALIZADOS -->
+    <section id="blog-trabajos" class="trabajos-section" style="padding-top: 0;">
+        <h2 class="service-title">Blog de trabajos realizados</h2>
+        <div class="trabajos-grid">
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_1.jpg" alt="Instalación en tienda">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_2.jpg" alt="Expositor Loewe">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_3.jpg" alt="Mostrador de herramientas">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_4.jpg" alt="Stand Grupo Casli">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_5.jpg" alt="Expositor interior">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_6.jpg" alt="Trabajo reciente 6">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_7.jpg" alt="Trabajo reciente 7">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_8.jpg" alt="Trabajo reciente 8">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_9.jpg" alt="Trabajo reciente 9">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_10.jpg" alt="Trabajo reciente 10">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_11.jpg" alt="Trabajo reciente 11">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_12.jpg" alt="Trabajo reciente 12">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_13.jpg" alt="Trabajo reciente 13">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_14.jpg" alt="Trabajo reciente 14">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_15.jpg" alt="Trabajo reciente 15">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_16.jpg" alt="Trabajo reciente 16">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_17.jpg" alt="Trabajo reciente 17">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_18.jpg" alt="Trabajo reciente 18">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_19.jpg" alt="Trabajo reciente 19">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_20.jpg" alt="Trabajo reciente 20">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_21.jpg" alt="Trabajo reciente 21">
+                </div>
+            </div>
+            <div class="trabajo-card reveal">
+                <div class="trabajo-image">
+                    <img src="images/blog_22.jpg" alt="Trabajo reciente 22">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contacto-section">
+        <h2 class="service-title">Contacto</h2>
+        <div class="contacto-grid">
+            <div class="contacto-card">
+                <div class="contacto-icon">📞</div>
+                <div class="contacto-info">
+                    <h3>Teléfono</h3>
+                    <p>637.372.331</p>
+                </div>
+            </div>
+            <div class="contacto-card">
+                <div class="contacto-icon">✉️</div>
+                <div class="contacto-info">
+                    <h3>Email</h3>
+                    <p>montajes.atm@gmail.com</p>
+                </div>
+            </div>
+            <div class="contacto-card full-width">
+                <div class="contacto-icon">📍</div>
+                <div class="contacto-info">
+                    <h3>Dirección</h3>
+                    <p>Coslada, Madrid</p>
+                </div>
+            </div>
+        </div>
+        <div class="web-credits">
+            <a href="https://julidevolver.pages.dev" target="_blank" rel="noopener">Diseño Web: <span>julidevolver.pages.dev</span></a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
