@@ -57,8 +57,8 @@ body {
 /* Estilos del Logo Principal (Cubo 3D) */
 .cube-container {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     perspective: 800px;
 }
 
@@ -76,72 +76,142 @@ body {
 
 .cube-face {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: rgba(20, 20, 20, 0.5); /* Semi-transparente para ver el interior y caras traseras */
+    width: 200px;
+    height: 200px;
+    background-color: transparent; /* Quitamos el fondo para que solo flote el logo */
+    backface-visibility: hidden; /* Oculta la cara cuando está de espaldas, evitando que se vean las letras invertidas */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid #FF0000; /* Borde rojo intenso y uniforme */
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8), inset 0 0 12px rgba(255, 0, 0, 0.8); /* Glow neón rojo */
 }
 
-.cube-front  { transform: rotateY(  0deg) translateZ(75px); }
-.cube-back   { transform: rotateY(180deg) translateZ(75px); }
-.cube-right  { transform: rotateY( 90deg) translateZ(75px); }
-.cube-left   { transform: rotateY(-90deg) translateZ(75px); }
-.cube-top    { transform: rotateX( 90deg) translateZ(75px); }
-.cube-bottom { transform: rotateX(-90deg) translateZ(75px); }
+.cube-front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube-back   { transform: rotateY(180deg) translateZ(100px); }
+.cube-right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube-left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube-top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(100px); }
 
 .logo-accent {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 4px solid var(--accent-red);
-    box-shadow: 3px 3px 0px rgba(227, 27, 35, 0.3); /* Efecto 3D en el borde */
-    transform: translateZ(10px);
+    border: 5px solid var(--accent-red); /* Match 5px thickness */
+    filter: drop-shadow(0 0 6px rgba(227, 27, 35, 0.8)) drop-shadow(0 0 12px rgba(227, 27, 35, 0.4));
 }
 
-.top-left {
-    top: 0;
-    left: 0;
+.bracket-left {
+    top: 5px;
+    left: -20px;
+    width: 60px;
+    height: 60px;
     border-right: none;
-    border-bottom: none;
+    border-top: none;
 }
 
-.bottom-right {
-    bottom: 0;
-    right: 0;
+.bracket-right {
+    top: -10px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
     border-left: none;
-    border-top: none;
+    border-bottom: none;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 900;
-    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Lighter weight for modern sci-fi look */
+    font-size: 3.5rem; /* Slightly larger to match image proportion */
     letter-spacing: 2px;
     z-index: 10;
     transform: translateZ(20px);
-    text-shadow: 
-        1px 1px 0px #444,
-        2px 2px 0px #333,
-        3px 3px 0px #222,
-        4px 4px 0px #111,
-        5px 5px 15px rgba(0,0,0,0.8);
+    position: relative; /* For absolute brackets */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.logo-text.no-glow {
+    transform: none;
+    text-shadow: none;
+}
+
+.logo-text.no-glow .custom-dash,
+.logo-text.no-glow .custom-t::before,
+.logo-text.no-glow .custom-t::after {
+    box-shadow: none;
 }
 
 .logo-top {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    align-items: center;
     margin-bottom: 5px;
 }
 
 .logo-bottom {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    margin-left: 28px; /* Position the M so its left leg is under the dash, and right leg is under the T */
+    margin-top: -5px; /* Pull it slightly closer to the top row for tighter grouping */
+}
+
+/* Custom typography elements */
+.custom-dash {
+    width: 25px;
+    height: 5px;
+    background-color: var(--text-white);
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.custom-t {
+    position: relative;
+    width: 30px;
+    height: 35px;
+}
+
+.custom-t::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--text-white);
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.custom-t::after {
+    content: '';
+    position: absolute;
+    top: 10px; /* Gap between top bar and vertical stem */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 25px;
+    background-color: var(--text-white);
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.custom-m {
+    color: var(--text-white);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+.logo-text.no-glow .custom-dash,
+.logo-text.no-glow .custom-t::before,
+.logo-text.no-glow .custom-t::after,
+.logo-text.no-glow .custom-m {
+    box-shadow: none;
+    filter: none;
+}
+
+.logo-top {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 /* Contenido Principal (Derecha) */
@@ -233,8 +303,8 @@ body {
 
 /* Animación 3D para el logo */
 @keyframes spinCube {
-    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-    100% { transform: rotateX(360deg) rotateY(720deg) rotateZ(180deg); }
+    0% { transform: rotateX(0deg) rotateZ(0deg); }
+    100% { transform: rotateX(360deg) rotateZ(360deg); }
 }
 
 /* Animaciones */
@@ -1010,20 +1080,20 @@ body {
 
     /* Reducir un poco el tamaño del logo 3D */
     .cube-container {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
         margin-bottom: 20px;
     }
     .cube-face {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
     }
-    .cube-front  { transform: rotateY(  0deg) translateZ(50px); }
-    .cube-back   { transform: rotateY(180deg) translateZ(50px); }
-    .cube-right  { transform: rotateY( 90deg) translateZ(50px); }
-    .cube-left   { transform: rotateY(-90deg) translateZ(50px); }
-    .cube-top    { transform: rotateX( 90deg) translateZ(50px); }
-    .cube-bottom { transform: rotateX(-90deg) translateZ(50px); }
+    .cube-front  { transform: rotateY(  0deg) translateZ(70px); }
+    .cube-back   { transform: rotateY(180deg) translateZ(70px); }
+    .cube-right  { transform: rotateY( 90deg) translateZ(70px); }
+    .cube-left   { transform: rotateY(-90deg) translateZ(70px); }
+    .cube-top    { transform: rotateX( 90deg) translateZ(70px); }
+    .cube-bottom { transform: rotateX(-90deg) translateZ(70px); }
 
     .logo-text {
         font-size: 2rem;
